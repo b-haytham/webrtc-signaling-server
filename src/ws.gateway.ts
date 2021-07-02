@@ -32,7 +32,7 @@ export class WsGateway implements OnGatewayConnection {
     this.server.to(data.to).emit('call.rejected', {from: data.from})
   }
 
-  @SubscribeMessage('reject.call')
+  @SubscribeMessage('end.call')
   endCall(@MessageBody(ValidationPipe) data: RejectCallEventDto) {
     this.server.to(data.to).emit('call.rejected', {from: data.from})
   }
