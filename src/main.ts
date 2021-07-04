@@ -6,6 +6,6 @@ async function bootstrap() {
 
   app.enableCors()
 
-  await app.listen(3000, '192.168.1.17');
+  await app.listen(3000);
 }
 bootstrap();
